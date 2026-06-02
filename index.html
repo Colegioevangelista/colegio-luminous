@@ -129,6 +129,22 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
+        @keyframes scroll-up {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+        .carousel-col-up {
+            animation: scroll-up 20s linear infinite;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .carousel-col-up-slow {
+            animation: scroll-up 28s linear infinite;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
@@ -261,10 +277,30 @@
 <!-- Purpose Section -->
 <section class="py-stack-lg bg-surface-container-low overflow-hidden">
 <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-stack-lg items-center transition-all duration-1000 opacity-100 translate-y-0">
-<div class="relative order-2 md:order-1">
-<img alt="Finished School Visualization" class="rounded-lg shadow-2xl relative z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALSwm_37IJBanny9fnwYNHjIwniAc74qB1-cPDfSdgraJoThbQtWnr2C_BxRIbHR68IXNaySQDzNGPyXTsZTu0mRT_mghf2Fqng9xs0lPzUYChlzPMqhHAwn5PDHwbW0lk1hCE_ay2YAa5U2dFFjgbQw204qSNZL5vO9Qz9UUFKtcSI6GBcQdDiBtp9nGeV4z6CmGDpRvH-yqmaB8B2mSQKUz_X68Iqu2mwkyB07c9A6vwGBTvjWghUIZlxjGZZbqzFZtyB2i2Hb4">
-<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl -z-0"></div>
-<div class="absolute -bottom-12 -right-12 w-64 h-64 bg-tertiary-container/20 rounded-full blur-3xl -z-0"></div>
+<div class="relative order-2 md:order-1 h-[480px] overflow-hidden rounded-2xl">
+  <div class="absolute inset-0 flex gap-3 p-2">
+    <!-- Columna 1 - scroll rápido -->
+    <div class="flex-1 overflow-hidden">
+      <div class="carousel-col-up">
+        <img alt="Render colegio" class="w-full h-56 object-cover rounded-xl shadow-md rotate-[-1.5deg]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALSwm_37IJBanny9fnwYNHjIwniAc74qB1-cPDfSdgraJoThbQtWnr2C_BxRIbHR68IXNaySQDzNGPyXTsZTu0mRT_mghf2Fqng9xs0lPzUYChlzPMqhHAwn5PDHwbW0lk1hCE_ay2YAa5U2dFFjgbQw204qSNZL5vO9Qz9UUFKtcSI6GBcQdDiBtp9nGeV4z6CmGDpRvH-yqmaB8B2mSQKUz_X68Iqu2mwkyB07c9A6vwGBTvjWghUIZlxjGZZbqzFZtyB2i2Hb4">
+        <img alt="Obras colegio" class="w-full h-44 object-cover rounded-xl shadow-md rotate-[1deg]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVUb4vK1Qz48dMq_Fret9h6lqIky09ugLBUYvqUSp1hKzHcq1ry_7QyJ8xjeNkDDk0rxAQFDpSwq2xR3c4uuRHWD_skJQseYzaWuWAeyFfLZvKw0R0DVMxWw2xkQ2uEKLnSn_MlVBiNUktg48K7uqzphxw3lH44M06pYGSKY8EcMQao5v1AEssamusNpErAsgphx9GS7_D82kOU_3I4iFY816VHTRsXw89j2WdKsxotFnfilbrzHC3BKbb-u6sE2r0J7L-UrSjqIY">
+        <img alt="Render colegio" class="w-full h-56 object-cover rounded-xl shadow-md rotate-[-1.5deg]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALSwm_37IJBanny9fnwYNHjIwniAc74qB1-cPDfSdgraJoThbQtWnr2C_BxRIbHR68IXNaySQDzNGPyXTsZTu0mRT_mghf2Fqng9xs0lPzUYChlzPMqhHAwn5PDHwbW0lk1hCE_ay2YAa5U2dFFjgbQw204qSNZL5vO9Qz9UUFKtcSI6GBcQdDiBtp9nGeV4z6CmGDpRvH-yqmaB8B2mSQKUz_X68Iqu2mwkyB07c9A6vwGBTvjWghUIZlxjGZZbqzFZtyB2i2Hb4">
+        <img alt="Obras colegio" class="w-full h-44 object-cover rounded-xl shadow-md rotate-[1deg]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVUb4vK1Qz48dMq_Fret9h6lqIky09ugLBUYvqUSp1hKzHcq1ry_7QyJ8xjeNkDDk0rxAQFDpSwq2xR3c4uuRHWD_skJQseYzaWuWAeyFfLZvKw0R0DVMxWw2xkQ2uEKLnSn_MlVBiNUktg48K7uqzphxw3lH44M06pYGSKY8EcMQao5v1AEssamusNpErAsgphx9GS7_D82kOU_3I4iFY816VHTRsXw89j2WdKsxotFnfilbrzHC3BKbb-u6sE2r0J7L-UrSjqIY">
+      </div>
+    </div>
+    <!-- Columna 2 - scroll lento y desplazada -->
+    <div class="flex-1 overflow-hidden mt-10">
+      <div class="carousel-col-up-slow">
+        <img alt="Obras colegio" class="w-full h-44 object-cover rounded-xl shadow-md rotate-[2deg]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVUb4vK1Qz48dMq_Fret9h6lqIky09ugLBUYvqUSp1hKzHcq1ry_7QyJ8xjeNkDDk0rxAQFDpSwq2xR3c4uuRHWD_skJQseYzaWuWAeyFfLZvKw0R0DVMxWw2xkQ2uEKLnSn_MlVBiNUktg48K7uqzphxw3lH44M06pYGSKY8EcMQao5v1AEssamusNpErAsgphx9GS7_D82kOU_3I4iFY816VHTRsXw89j2WdKsxotFnfilbrzHC3BKbb-u6sE2r0J7L-UrSjqIY">
+        <img alt="Render colegio" class="w-full h-56 object-cover rounded-xl shadow-md rotate-[-1deg]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALSwm_37IJBanny9fnwYNHjIwniAc74qB1-cPDfSdgraJoThbQtWnr2C_BxRIbHR68IXNaySQDzNGPyXTsZTu0mRT_mghf2Fqng9xs0lPzUYChlzPMqhHAwn5PDHwbW0lk1hCE_ay2YAa5U2dFFjgbQw204qSNZL5vO9Qz9UUFKtcSI6GBcQdDiBtp9nGeV4z6CmGDpRvH-yqmaB8B2mSQKUz_X68Iqu2mwkyB07c9A6vwGBTvjWghUIZlxjGZZbqzFZtyB2i2Hb4">
+        <img alt="Obras colegio" class="w-full h-44 object-cover rounded-xl shadow-md rotate-[2deg]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVUb4vK1Qz48dMq_Fret9h6lqIky09ugLBUYvqUSp1hKzHcq1ry_7QyJ8xjeNkDDk0rxAQFDpSwq2xR3c4uuRHWD_skJQseYzaWuWAeyFfLZvKw0R0DVMxWw2xkQ2uEKLnSn_MlVBiNUktg48K7uqzphxw3lH44M06pYGSKY8EcMQao5v1AEssamusNpErAsgphx9GS7_D82kOU_3I4iFY816VHTRsXw89j2WdKsxotFnfilbrzHC3BKbb-u6sE2r0J7L-UrSjqIY">
+        <img alt="Render colegio" class="w-full h-56 object-cover rounded-xl shadow-md rotate-[-1deg]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALSwm_37IJBanny9fnwYNHjIwniAc74qB1-cPDfSdgraJoThbQtWnr2C_BxRIbHR68IXNaySQDzNGPyXTsZTu0mRT_mghf2Fqng9xs0lPzUYChlzPMqhHAwn5PDHwbW0lk1hCE_ay2YAa5U2dFFjgbQw204qSNZL5vO9Qz9UUFKtcSI6GBcQdDiBtp9nGeV4z6CmGDpRvH-yqmaB8B2mSQKUz_X68Iqu2mwkyB07c9A6vwGBTvjWghUIZlxjGZZbqzFZtyB2i2Hb4">
+      </div>
+    </div>
+  </div>
+  <!-- Degradados suaves arriba y abajo -->
+  <div class="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#f5f3f1] to-transparent z-10 pointer-events-none"></div>
+  <div class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#f5f3f1] to-transparent z-10 pointer-events-none"></div>
 </div>
 <div class="space-y-stack-md order-1 md:order-2">
 <h2 class="font-headline-md text-headline-md font-bold leading-tight">No estamos construyendo solo un edificio. Estamos construyendo futuro.</h2>

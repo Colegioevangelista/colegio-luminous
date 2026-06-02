@@ -1,0 +1,607 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Colegio Luminous | Construyendo el Futuro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#545e76",
+                    "secondary-fixed": "#d7e2ff",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#e9c349",
+                    "secondary-container": "#d7e2ff",
+                    "surface-tint": "#735c00",
+                    "tertiary": "#57624b",
+                    "on-tertiary-container": "#3e4833",
+                    "on-tertiary-fixed": "#151e0c",
+                    "on-surface": "#1b1c1b",
+                    "primary-container": "#d4af37",
+                    "tertiary-fixed-dim": "#bfcbaf",
+                    "surface-container-low": "#f5f3f1",
+                    "error-container": "#ffdad6",
+                    "outline": "#7f7663",
+                    "background": "#fbf9f7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#554300",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#dbdad8",
+                    "on-secondary-fixed-variant": "#3c475d",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-container-highest": "#e4e2e0",
+                    "tertiary-container": "#acb79c",
+                    "on-surface-variant": "#4d4635",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface": "#fbf9f7",
+                    "surface-bright": "#fbf9f7",
+                    "on-tertiary-fixed-variant": "#404a35",
+                    "inverse-primary": "#e9c349",
+                    "outline-variant": "#d0c5af",
+                    "secondary-fixed-dim": "#bbc6e2",
+                    "surface-container": "#efedec",
+                    "on-primary-fixed": "#241a00",
+                    "surface-variant": "#e4e2e0",
+                    "primary-fixed": "#ffe088",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#dbe7ca",
+                    "on-secondary-container": "#5a647c",
+                    "primary": "#735c00",
+                    "inverse-surface": "#30302f",
+                    "on-secondary-fixed": "#101b30",
+                    "surface-container-high": "#eae8e6",
+                    "inverse-on-surface": "#f2f0ee",
+                    "on-background": "#1b1c1b"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "container-max": "1200px",
+                    "stack-sm": "16px",
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "stack-md": "32px",
+                    "gutter": "24px",
+                    "stack-lg": "64px"
+            },
+            "fontFamily": {
+                    "headline-md-mobile": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "label-caps": ["Inter"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-md-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            background: rgba(251, 249, 247, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .gold-glow {
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+        }
+        .perspective-card {
+            perspective: 1000px;
+        }
+        .donors-track {
+            display: flex;
+            animation: scroll 40s linear infinite;
+            width: max-content;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .scroll-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scroll-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30 shadow-sm">
+<div class="max-w-[1200px] mx-auto flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
+<a class="font-headline-md text-headline-md font-bold text-primary transition-transform active:scale-95" href="#">Colegio</a>
+<div class="hidden lg:flex items-center gap-8">
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#proyecto">Nuestro Proyecto</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#impacto">Impacto</a>
+<a class="font-body-md text-primary font-bold border-b-2 border-primary pb-1" href="#donaciones">Donaciones</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#transparencia">Transparencia</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#linea-de-tiempo">Línea de Tiempo</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-bold shadow-md hover:opacity-90 active:scale-95 transition-all">
+                Donar Ahora
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0 transition-all duration-1000 opacity-100 translate-y-0">
+<img alt="School Construction Concept" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVUb4vK1Qz48dMq_Fret9h6lqIky09ugLBUYvqUSp1hKzHcq1ry_7QyJ8xjeNkDDk0rxAQFDpSwq2xR3c4uuRHWD_skJQseYzaWuWAeyFfLZvKw0R0DVMxWw2xkQ2uEKLnSn_MlVBiNUktg48K7uqzphxw3lH44M06pYGSKY8EcMQao5v1AEssamusNpErAsgphx9GS7_D82kOU_3I4iFY816VHTRsXw89j2WdKsxotFnfilbrzHC3BKbb-u6sE2r0J7L-UrSjqIY">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop w-full grid md:grid-cols-2 gap-stack-lg items-center transition-all duration-1000 opacity-100 translate-y-0">
+<div class="space-y-stack-md">
+<span class="inline-block font-label-caps text-label-caps text-primary px-4 py-1.5 rounded-full bg-primary-fixed/30 backdrop-blur-md">PROYECTO 2024-2026</span>
+<h1 class="font-display-lg-mobile md:text-display-lg font-bold text-on-surface leading-tight">
+                    Construyamos juntos el colegio que cambiará generaciones
+                </h1>
+<p class="font-body-lg text-on-surface-variant max-w-lg">
+                    Un nuevo espacio educativo donde cientos de niños podrán crecer, aprender y descubrir su propósito. Cada donación nos acerca a levantar este sueño.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold shadow-lg hover:translate-y-[-2px] transition-all">Donar ahora</button>
+<button class="bg-surface-container-highest/80 backdrop-blur text-on-surface px-10 py-4 rounded-full font-bold border border-outline-variant hover:bg-surface-container-high transition-all">Ver el proyecto</button>
+</div>
+</div>
+<!-- Stats Card -->
+<div class="relative lg:pl-12">
+<div class="bg-surface/90 backdrop-blur-xl p-8 rounded-lg border border-outline-variant/30 shadow-2xl space-y-6">
+<div class="flex justify-between items-end">
+<div>
+<p class="font-label-caps text-on-surface-variant opacity-60">RECAUDADO</p>
+<h3 class="text-headline-md font-bold text-primary">20.000•</h3>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-on-surface-variant opacity-60">META</p>
+<h4 class="font-body-lg font-semibold">5.000.000 •</h4>
+</div>
+</div>
+<div class="relative h-4 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="absolute inset-y-0 left-0 bg-primary-container w-[23.7%] rounded-full shadow-inner" style="width: 1%;"></div>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-4">
+<div class="bg-surface-container-low p-4 rounded-DEFAULT">
+<span class="material-symbols-outlined text-primary mb-2">volunteer_activism</span>
+<p class="font-bold text-headline-md-mobile">12</p>
+<p class="text-label-caps text-on-surface-variant">Donantes</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-DEFAULT">
+<span class="material-symbols-outlined text-primary mb-2">calendar_month</span>
+<p class="font-bold text-headline-md-mobile">36</p>
+<p class="text-label-caps text-on-surface-variant">Meses restantes</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Progress Section -->
+<section class="py-stack-lg bg-surface" id="proyecto">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop transition-all duration-1000 opacity-100 translate-y-0">
+<div class="text-center mb-stack-md">
+<h2 class="font-headline-md text-headline-md font-bold mb-4">Así avanza la construcción</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Nuestro compromiso es la transparencia absoluta. Acompañanos en cada paso de esta edificacion.</p>
+</div>
+<div class="relative py-12">
+<div class="h-6 bg-surface-container-highest rounded-full w-full mb-12 shadow-inner p-1">
+<div class="h-full bg-gradient-to-r from-primary to-primary-fixed-dim rounded-full transition-all duration-1000 ease-out" style="width: 23.7%"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-6 gap-gutter">
+<div class="text-center space-y-2 opacity-100">
+<div class="w-12 h-12 bg-primary rounded-full mx-auto flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined">check</span>
+</div>
+<p class="font-bold text-on-surface">Terreno</p>
+<p class="text-label-caps text-primary">COMPLETADO</p>
+</div>
+<div class="text-center space-y-2 opacity-100">
+<div class="w-12 h-12 bg-primary rounded-full mx-auto flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined">check</span>
+</div>
+<p class="font-bold text-on-surface">Arquitectura</p>
+<p class="text-label-caps text-primary">COMPLETADO</p>
+</div>
+<div class="text-center space-y-2 opacity-50">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full mx-auto flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">construction</span>
+</div>
+<p class="font-bold text-on-surface-variant">Inicio Obra</p>
+<p class="text-label-caps">EN PROCESO</p>
+</div>
+<div class="text-center space-y-2 opacity-50">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full mx-auto flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">foundation</span>
+</div>
+<p class="font-bold text-on-surface-variant">Aulas</p>
+<p class="text-label-caps">EN PROCESO</p>
+</div>
+<div class="text-center space-y-2 opacity-50">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full mx-auto flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">sports_basketball</span>
+</div>
+<p class="font-bold text-on-surface-variant">Polideportivo</p>
+<p class="text-label-caps">PENDIENTE</p>
+</div>
+<div class="text-center space-y-2 opacity-50">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full mx-auto flex items-center justify-center">
+<span class="material-symbols-outlined text-outline">school</span>
+</div>
+<p class="font-bold text-on-surface-variant">Apertura</p>
+<p class="text-label-caps">META FINAL</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Purpose Section -->
+<section class="py-stack-lg bg-surface-container-low overflow-hidden">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-stack-lg items-center transition-all duration-1000 opacity-100 translate-y-0">
+<div class="relative order-2 md:order-1">
+<img alt="Finished School Visualization" class="rounded-lg shadow-2xl relative z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALSwm_37IJBanny9fnwYNHjIwniAc74qB1-cPDfSdgraJoThbQtWnr2C_BxRIbHR68IXNaySQDzNGPyXTsZTu0mRT_mghf2Fqng9xs0lPzUYChlzPMqhHAwn5PDHwbW0lk1hCE_ay2YAa5U2dFFjgbQw204qSNZL5vO9Qz9UUFKtcSI6GBcQdDiBtp9nGeV4z6CmGDpRvH-yqmaB8B2mSQKUz_X68Iqu2mwkyB07c9A6vwGBTvjWghUIZlxjGZZbqzFZtyB2i2Hb4">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl -z-0"></div>
+<div class="absolute -bottom-12 -right-12 w-64 h-64 bg-tertiary-container/20 rounded-full blur-3xl -z-0"></div>
+</div>
+<div class="space-y-stack-md order-1 md:order-2">
+<h2 class="font-headline-md text-headline-md font-bold leading-tight">No estamos construyendo solo un edificio. Estamos construyendo futuro.</h2>
+<p class="font-body-lg text-on-surface-variant">
+                    Este colegio nace con el deseo de ofrecer una educación excelente, basada en valores cristianos, que prepare a los niños no solo para el éxito profesional, sino para ser agentes de cambio en su sociedad a través del amor y el servicio.
+                </p>
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">groups</span>
+</div>
+<span class="font-bold">400 Alumnos</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">meeting_room</span>
+</div>
+<span class="font-bold">35 Aulas</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">fitness_center</span>
+</div>
+<span class="font-bold">Polideportivo</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">restaurant</span>
+</div>
+<span class="font-bold">Comedor</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">library_books</span>
+</div>
+<span class="font-bold">Biblioteca</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">church</span>
+</div>
+<span class="font-bold">Capilla</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Donation Packs -->
+<section class="py-stack-lg" id="donaciones">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop transition-all duration-1000 opacity-100 translate-y-0">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-md text-headline-md font-bold mb-4">Elige cómo quieres formar parte</h2>
+<p class="text-on-surface-variant">Cada aportación, pequeña o grande, es una piedra viva en este fundamento.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-gutter items-stretch">
+<!-- Pack Semilla -->
+<div class="bg-surface p-8 rounded-lg border border-outline-variant hover:shadow-xl transition-all flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-4">potted_plant</span>
+<h3 class="font-bold mb-2">Pack Semilla</h3>
+<p class="text-headline-md font-bold text-primary mb-6">50€</p>
+<p class="text-on-surface-variant text-sm mb-8 flex-grow">Ayuda con los materiales básicos para un alumno.</p>
+<button class="w-full py-3 rounded-full border border-primary text-primary font-bold hover:bg-primary/5 transition-all">Elegir</button>
+</div>
+<!-- Pack Ladrillo -->
+<div class="bg-surface p-8 rounded-lg border border-outline-variant hover:shadow-xl transition-all flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-4">square_foot</span>
+<h3 class="font-bold mb-2">Pack Ladrillo</h3>
+<p class="text-headline-md font-bold text-primary mb-6">100€</p>
+<p class="text-on-surface-variant text-sm mb-8 flex-grow">Contribuye directamente a la estructura física del aula.</p>
+<button class="w-full py-3 rounded-full border border-primary text-primary font-bold hover:bg-primary/5 transition-all">Elegir</button>
+</div>
+<!-- Pack Legado - Highlighted -->
+<div class="bg-primary text-on-primary p-8 rounded-lg shadow-2xl scale-105 relative z-10 gold-glow flex flex-col items-center text-center border-2 border-primary-container">
+<div class="absolute -top-4 right-8 bg-primary-container text-on-primary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Premium</div>
+<span class="material-symbols-outlined text-4xl mb-4" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<h3 class="font-bold mb-2">Pack Legado</h3>
+
+<p class="opacity-80 text-sm mb-8 flex-grow">Si quieres hacer historia, donación mayorista para áreas críticas. Reconocimiento en el muro de honor.</p>
+<button class="w-full py-4 rounded-full bg-primary-container text-on-primary-container font-bold hover:opacity-90 shadow-lg transition-all">Contáctanos</button>
+</div>
+<!-- Pack Aula -->
+<div class="bg-surface p-8 rounded-lg border border-outline-variant hover:shadow-xl transition-all flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-4">school</span>
+<h3 class="font-bold mb-2">Pack Aula</h3>
+<p class="text-headline-md font-bold text-primary mb-6">100€</p>
+<p class="text-on-surface-variant text-sm mb-8 flex-grow">Equipamiento tecnológico completo para una clase.</p>
+<button class="w-full py-3 rounded-full border border-primary text-primary font-bold hover:bg-primary/5 transition-all">Elegir</button>
+</div>
+<!-- Pack Fundador -->
+<div class="bg-surface p-8 rounded-lg border border-outline-variant hover:shadow-xl transition-all flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-4xl text-tertiary mb-4">workspace_premium</span>
+<h3 class="font-bold mb-2">Pack Fundador</h3>
+<p class="text-headline-md font-bold text-primary mb-6">10.000€</p>
+<p class="text-on-surface-variant text-sm mb-8 flex-grow">Membresía vitalicia y placa conmemorativa.</p>
+<button class="w-full py-3 rounded-full border border-primary text-primary font-bold hover:bg-primary/5 transition-all">Elegir</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Zonal Donations Grid -->
+<section class="py-stack-lg bg-surface-container-highest/30">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop transition-all duration-1000 opacity-100 translate-y-0">
+<h2 class="font-headline-md text-headline-md font-bold text-center mb-stack-lg">Elige qué parte del colegio quieres ayudar a construir</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Zone Card 1 -->
+<div class="bg-surface-container p-6 rounded-lg space-y-4 hover:translate-y-[-4px] transition-transform shadow-sm">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary">meeting_room</span>
+<span class="bg-primary-container text-on-primary-container text-xs font-bold px-2 py-1 rounded">32%</span>
+</div>
+<div>
+<h4 class="font-bold mb-1">Aulas principales</h4>
+<p class="text-sm text-on-surface-variant mb-4">El corazón de la enseñanza.</p>
+</div>
+<div class="h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[32%]"></div>
+</div>
+</div>
+<!-- Zone Card 2 -->
+<div class="bg-surface-container p-6 rounded-lg space-y-4 hover:translate-y-[-4px] transition-transform shadow-sm">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary">sports_basketball</span>
+<span class="bg-primary-container text-on-primary-container text-xs font-bold px-2 py-1 rounded">22%</span>
+</div>
+<div>
+<h4 class="font-bold mb-1">Polideportivo</h4>
+<p class="text-sm text-on-surface-variant mb-4">Salud y compañerismo.</p>
+</div>
+<div class="h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[22%]"></div>
+</div>
+</div>
+<!-- Zone Card 3 -->
+<div class="bg-surface-container p-6 rounded-lg space-y-4 hover:translate-y-[-4px] transition-transform shadow-sm">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary">library_books</span>
+<span class="bg-primary-container text-on-primary-container text-xs font-bold px-2 py-1 rounded">38%</span>
+</div>
+<div>
+<h4 class="font-bold mb-1">Biblioteca</h4>
+<p class="text-sm text-on-surface-variant mb-4">Sabiduría y exploración.</p>
+</div>
+<div class="h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[38%]"></div>
+</div>
+</div>
+<!-- Zone Card 4 -->
+<div class="bg-surface-container p-6 rounded-lg space-y-4 hover:translate-y-[-4px] transition-transform shadow-sm">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary">restaurant</span>
+<span class="bg-primary-container text-on-primary-container text-xs font-bold px-2 py-1 rounded">30%</span>
+</div>
+<div>
+<h4 class="font-bold mb-1">Comedor</h4>
+<p class="text-sm text-on-surface-variant mb-4">Nutrición y comunidad.</p>
+</div>
+<div class="h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[30%]"></div>
+</div>
+</div>
+<!-- Zone Card 5 -->
+<div class="bg-surface-container p-6 rounded-lg space-y-4 hover:translate-y-[-4px] transition-transform shadow-sm">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary">nature_people</span>
+<span class="bg-primary-container text-on-primary-container text-xs font-bold px-2 py-1 rounded">20%</span>
+</div>
+<div>
+<h4 class="font-bold mb-1">Patio</h4>
+<p class="text-sm text-on-surface-variant mb-4">Juego y creatividad.</p>
+</div>
+<div class="h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[20%]"></div>
+</div>
+</div>
+<!-- Zone Card 6 -->
+<div class="bg-surface-container p-6 rounded-lg space-y-4 hover:translate-y-[-4px] transition-transform shadow-sm">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary">church</span>
+<span class="bg-primary-container text-on-primary-container text-xs font-bold px-2 py-1 rounded">36%</span>
+</div>
+<div>
+<h4 class="font-bold mb-1">Capilla</h4>
+<p class="text-sm text-on-surface-variant mb-4">El alma del colegio.</p>
+</div>
+<div class="h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[36%]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Donors Carousel -->
+<section class="py-stack-md bg-inverse-surface text-inverse-on-surface overflow-hidden">
+<div class="donors-track gap-8 px-4 transition-all duration-1000 opacity-100 translate-y-0">
+<!-- Donor items repeated for loop -->
+<div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-full border border-white/5 whitespace-nowrap">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold text-xs">AM</div>
+<span class="font-bold">Ana y Miguel</span>
+<span class="text-primary-fixed-dim">100€</span>
+<span class="text-sm opacity-60">"Por un futuro mejor"</span>
+</div>
+<div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-full border border-white/5 whitespace-nowrap">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-bold text-xs">JG</div>
+<span class="font-bold">Juan García</span>
+<span class="text-primary-fixed-dim">500€</span>
+<span class="text-sm opacity-60">"Para la gloria de Dios"</span>
+</div>
+<div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-full border border-white/5 whitespace-nowrap">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed font-bold text-xs">EL</div>
+<span class="font-bold">Familia Estrada</span>
+<span class="text-primary-fixed-dim">1.000€</span>
+<span class="text-sm opacity-60">"Un aula entera"</span>
+</div>
+<div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-full border border-white/5 whitespace-nowrap">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold text-xs">LC</div>
+<span class="font-bold">Luis Carlos</span>
+<span class="text-primary-fixed-dim">50€</span>
+<span class="text-sm opacity-60">"Granito de arena"</span>
+</div>
+<!-- Duplication for seamless scroll -->
+<div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-full border border-white/5 whitespace-nowrap">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold text-xs">AM</div>
+<span class="font-bold">Ana y Miguel</span>
+<span class="text-primary-fixed-dim">100€</span>
+<span class="text-sm opacity-60">"Por un futuro mejor"</span>
+</div>
+<div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-full border border-white/5 whitespace-nowrap">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-bold text-xs">JG</div>
+<span class="font-bold">Juan García</span>
+<span class="text-primary-fixed-dim">500€</span>
+<span class="text-sm opacity-60">"Para la gloria de Dios"</span>
+</div>
+</div>
+</section>
+<!-- Transparency -->
+<section class="py-stack-lg" id="transparencia">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop transition-all duration-1000 opacity-100 translate-y-0">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-low p-10 rounded-lg group hover:bg-primary transition-all duration-500 cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary mb-6 transition-colors">history</span>
+<h3 class="font-bold text-headline-md-mobile mb-4 group-hover:text-on-primary transition-colors">Avances de obra</h3>
+<p class="text-on-surface-variant group-hover:text-on-primary/80 transition-colors">Galería de fotos y vídeos actualizada cada semana.</p>
+</div>
+<div class="bg-surface-container-low p-10 rounded-lg group hover:bg-primary transition-all duration-500 cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary mb-6 transition-colors">description</span>
+<h3 class="font-bold text-headline-md-mobile mb-4 group-hover:text-on-primary transition-colors">Informe donaciones</h3>
+<p class="text-on-surface-variant group-hover:text-on-primary/80 transition-colors">Auditoría externa disponible para descarga pública.</p>
+</div>
+<div class="bg-surface-container-low p-10 rounded-lg group hover:bg-primary transition-all duration-500 cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-on-primary mb-6 transition-colors">favorite</span>
+<h3 class="font-bold text-headline-md-mobile mb-4 group-hover:text-on-primary transition-colors">Historias reales</h3>
+<p class="text-on-surface-variant group-hover:text-on-primary/80 transition-colors">Testimonios de las familias que esperan su plaza.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="relative py-stack-lg overflow-hidden">
+<div class="absolute inset-0 z-0 transition-all duration-1000 opacity-100 translate-y-0">
+<img alt="Hero Render" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALSwm_37IJBanny9fnwYNHjIwniAc74qB1-cPDfSdgraJoThbQtWnr2C_BxRIbHR68IXNaySQDzNGPyXTsZTu0mRT_mghf2Fqng9xs0lPzUYChlzPMqhHAwn5PDHwbW0lk1hCE_ay2YAa5U2dFFjgbQw204qSNZL5vO9Qz9UUFKtcSI6GBcQdDiBtp9nGeV4z6CmGDpRvH-yqmaB8B2mSQKUz_X68Iqu2mwkyB07c9A6vwGBTvjWghUIZlxjGZZbqzFZtyB2i2Hb4">
+<div class="absolute inset-0 bg-primary/80 backdrop-blur-sm"></div>
+</div>
+<div class="relative z-10 max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop text-center py-16 transition-all duration-1000 opacity-100 translate-y-0">
+<div class="max-w-3xl mx-auto space-y-stack-md">
+<h2 class="font-display-lg-mobile md:text-display-lg font-bold text-on-primary leading-tight">Este colegio empieza con personas que deciden creer</h2>
+<p class="font-body-lg text-on-primary opacity-80">Únete hoy a la construcción de un legado que perdurará por siglos. Tu nombre quedará grabado en los cimientos de este proyecto.</p>
+<div class="flex flex-wrap justify-center gap-4 pt-8">
+<button class="bg-primary-container text-on-primary-container px-12 py-5 rounded-full font-bold text-lg shadow-2xl hover:scale-105 active:scale-95 transition-all">Donar ahora</button>
+<button class="bg-white/10 backdrop-blur text-on-primary px-12 py-5 rounded-full font-bold text-lg border border-white/20 hover:bg-white/20 transition-all">Compartir el proyecto</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-inverse-surface text-inverse-on-surface w-full py-12">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="space-y-4">
+<h3 class="font-headline-md text-primary-fixed-dim font-bold">Colegio Evangelista Pamplona</h3>
+<p class="text-sm opacity-60">Una obra de amor para las nuevas generaciones de España.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold">Navegación</h4>
+<ul class="space-y-2 text-sm opacity-80">
+<li class=""><a class="hover:text-primary-fixed-dim transition-colors" href="#">Nuestro Proyecto</a></li>
+<li class=""><a class="hover:text-primary-fixed-dim transition-colors" href="#">Impacto</a></li>
+<li class=""><a class="hover:text-primary-fixed-dim transition-colors" href="#">Donaciones</a></li>
+<li class=""><a class="hover:text-primary-fixed-dim transition-colors" href="#">Transparencia</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold">Legal</h4>
+<ul class="space-y-2 text-sm opacity-80">
+<li class=""><a class="hover:text-primary-fixed-dim transition-colors" href="#">Privacidad</a></li>
+<li class=""><a class="hover:text-primary-fixed-dim transition-colors" href="#">Términos</a></li>
+<li class=""><a class="hover:text-primary-fixed-dim transition-colors" href="#">Contacto</a></li>
+<li class=""><a class="hover:text-primary-fixed-dim transition-colors" href="#">Preguntas Frecuentes</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold">Suscríbete</h4>
+<p class="text-xs opacity-60">Recibe noticias de los avances en tu correo.</p>
+<div class="flex">
+<input class="bg-white/5 border border-white/10 rounded-l-full px-4 py-2 w-full focus:outline-none focus:border-primary-fixed-dim" placeholder="Email" type="email">
+<button class="bg-primary-fixed-dim text-on-primary-fixed px-4 py-2 rounded-r-full">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop mt-12 pt-8 border-t border-white/10 text-center text-xs opacity-40">
+            © 2024 Colegio Luminous. Construyendo un futuro de esperanza.
+        </div>
+</footer>
+<script>
+        // Simple intersection observer for reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+
+
+
+
+
+
+</body></html>

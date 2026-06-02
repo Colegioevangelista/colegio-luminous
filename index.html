@@ -149,27 +149,27 @@
         .cursor-dot {
             width: 8px;
             height: 8px;
-            background: #3b8beb;
+            background: #c9a227;
             border-radius: 50%;
             position: fixed;
             top: 0; left: 0;
             pointer-events: none;
             z-index: 9999;
             transform: translate(-50%, -50%);
-            box-shadow: 0 0 8px #3b8beb, 0 0 20px rgba(59, 139, 235, 0.6), 0 0 40px rgba(59, 139, 235, 0.3);
+            box-shadow: 0 0 8px #c9a227, 0 0 20px rgba(201, 162, 39, 0.6), 0 0 40px rgba(201, 162, 39, 0.3);
             transition: width 0.15s, height 0.15s;
         }
         .cursor-ring {
             width: 38px;
             height: 38px;
-            border: 1.5px solid rgba(59, 139, 235, 0.45);
+            border: 1.5px solid rgba(201, 162, 39, 0.45);
             border-radius: 50%;
             position: fixed;
             top: 0; left: 0;
             pointer-events: none;
             z-index: 9998;
             transform: translate(-50%, -50%);
-            box-shadow: 0 0 12px rgba(59, 139, 235, 0.15);
+            box-shadow: 0 0 12px rgba(201, 162, 39, 0.15);
             transition: width 0.2s, height 0.2s, border-color 0.2s;
         }
     </style>
@@ -483,14 +483,14 @@
                 dot.style.height = '12px';
                 ring.style.width = '54px';
                 ring.style.height = '54px';
-                ring.style.borderColor = 'rgba(201, 162, 39, 0.6)';
+                ring.style.borderColor = 'rgba(201, 162, 39, 0.9)';
             });
             el.addEventListener('mouseleave', () => {
                 dot.style.width = '8px';
                 dot.style.height = '8px';
                 ring.style.width = '38px';
                 ring.style.height = '38px';
-                ring.style.borderColor = 'rgba(59, 139, 235, 0.45)';
+                ring.style.borderColor = 'rgba(201, 162, 39, 0.45)';
             });
         });
 
